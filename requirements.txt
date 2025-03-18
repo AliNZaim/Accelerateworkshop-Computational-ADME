@@ -1,6 +1,6 @@
-scikit-learn>=0.20.3
-rdkit>=2018.09.3.0
-xgboost>=0.82
-lightgbm>=2.23
-deepchem>=2.1.0
-chemprop>=1.5.2
+scikit-learn
+rdkit
+xgboost
+lightgbm
+deepchem
+chemprop
