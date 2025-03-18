@@ -1,6 +1,6 @@
 FROM python:3.14.0a6-bookworm
 
-RUN apt-get update && apt-get -y install wget gfortran libxml2-dev libcurl4-openssl-dev libssl-dev liblapack-dev libblas-dev
+RUN apt-get update && apt-get -y install wget gfortran libxml2-dev libcurl4-openssl-dev libssl-dev liblapack-dev libblas-dev cmake
 
 ARG CACHEBUST
 RUN echo "$CACHEBUST"
