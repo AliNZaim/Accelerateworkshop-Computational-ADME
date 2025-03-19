@@ -1,15 +1,16 @@
 FROM ghcr.io/mamba-org/micromamba:git-9d20aae-amazon2023
 #python:3.14.0a6-bookworm
 
-RUN micromamba install git
+RUN micromamba install --yes unzip && micromamba clean --all --yes
+ARG MAMBA_DOCKERFILE_ACTIVATE=1
 #RUN micromamba install wget unzip
 #RUN apt-get update && apt-get -y install wget unzip
 #gfortran libxml2-dev libcurl4-openssl-dev libssl-dev liblapack-dev libblas-dev cmake libopenblas-dev pkg-config libopenblas64-dev
 
 ARG CACHEBUST
 RUN echo "$CACHEBUST"
-ADD https://github.com/AliNZaim/Accelerateworkshop-Computational-ADME.git /
-RUN git checkout dev
+ADD https://github.com/AliNZaim/Accelerateworkshop-Computational-ADME/archive/refs/heads/dev.zip /
+RUN unzip dev.zip && rm dev.zip
 #RUN wget https://github.com/AliNZaim/Accelerateworkshop-Computational-ADME/archive/refs/heads/dev.zip && unzip dev.zip && rm dev.zip
 #RUN bash /Accelerateworkshop-Computational-ADME-dev/prep/install-libgfortran3.sh
 #RUN conda config --add channels conda-forge
