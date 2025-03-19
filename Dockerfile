@@ -9,7 +9,7 @@ RUN echo "$CACHEBUST"
 ADD https://github.com/AliNZaim/Accelerateworkshop-Computational-ADME/archive/refs/heads/dev.zip /
 USER root
 RUN unzip /dev -d / && rm /dev.zip
-RUN micromamba lock -p linux-64 -f /Accelerateworkshop-Computational-ADME-dev/environment.yml && micromamba create --name adme-dock --file mamba-linux-64.lock
+#RUN micromamba lock -p linux-64 -f /Accelerateworkshop-Computational-ADME-dev/environment.yml && micromamba create --name adme-dock --file mamba-linux-64.lock
 
 WORKDIR /Accelerateworkshop-Computational-ADME-dev
 CMD ["python", "--version"]
