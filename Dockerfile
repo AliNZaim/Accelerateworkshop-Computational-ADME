@@ -12,7 +12,7 @@ ARG CACHEBUST
 RUN echo "$CACHEBUST"
 ADD https://github.com/AliNZaim/Accelerateworkshop-Computational-ADME/archive/refs/heads/dev.zip /
 USER root
-RUN unzip /dev && rm /dev.zip
+RUN unzip /dev #&& rm /dev.zip
 #RUN wget https://github.com/AliNZaim/Accelerateworkshop-Computational-ADME/archive/refs/heads/dev.zip && unzip dev.zip && rm dev.zip
 #RUN bash /Accelerateworkshop-Computational-ADME-dev/prep/install-libgfortran3.sh
 #RUN conda config --add channels conda-forge
@@ -20,5 +20,5 @@ RUN unzip /dev && rm /dev.zip
 #RUN micromamba lock -p linux-64 -f /Accelerateworkshop-Computational-ADME-dev/environment.yml && micromamba create --name adme-dock --file mamba-linux-64.lock
 
 #RUN micromamba activate adme-dock
-WORKDIR /Accelerateworkshop-Computational-ADME-dev
+#WORKDIR /Accelerateworkshop-Computational-ADME-dev
 CMD ["python", "--version"]
