@@ -11,6 +11,7 @@ ARG MAMBA_DOCKERFILE_ACTIVATE=1
 ARG CACHEBUST
 RUN echo "$CACHEBUST"
 ADD https://github.com/AliNZaim/Accelerateworkshop-Computational-ADME/archive/refs/heads/dev.zip /
+USER root
 RUN unzip /dev && rm /dev.zip
 #RUN wget https://github.com/AliNZaim/Accelerateworkshop-Computational-ADME/archive/refs/heads/dev.zip && unzip dev.zip && rm dev.zip
 #RUN bash /Accelerateworkshop-Computational-ADME-dev/prep/install-libgfortran3.sh
