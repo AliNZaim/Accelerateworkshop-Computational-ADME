@@ -1,5 +1,6 @@
 FROM ghcr.io/mamba-org/micromamba:git-9d20aae-amazon2023
 #python:3.14.0a6-bookworm
+# https://micromamba-docker.readthedocs.io/en/latest/quick_start.html
 
 RUN micromamba install --yes unzip && micromamba clean --all --yes
 ARG MAMBA_DOCKERFILE_ACTIVATE=1
@@ -10,7 +11,7 @@ ARG MAMBA_DOCKERFILE_ACTIVATE=1
 ARG CACHEBUST
 RUN echo "$CACHEBUST"
 ADD https://github.com/AliNZaim/Accelerateworkshop-Computational-ADME/archive/refs/heads/dev.zip /
-#RUN unzip /dev.zip && rm /dev.zip
+RUN unzip /dev && rm /dev.zip
 #RUN wget https://github.com/AliNZaim/Accelerateworkshop-Computational-ADME/archive/refs/heads/dev.zip && unzip dev.zip && rm dev.zip
 #RUN bash /Accelerateworkshop-Computational-ADME-dev/prep/install-libgfortran3.sh
 #RUN conda config --add channels conda-forge
