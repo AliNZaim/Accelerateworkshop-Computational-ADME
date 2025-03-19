@@ -8,8 +8,8 @@ RUN micromamba install unzip
 
 ARG CACHEBUST
 RUN echo "$CACHEBUST"
-ADD https://github.com/AliNZaim/Accelerateworkshop-Computational-ADME/archive/refs/heads/dev.zip /
-RUN unzip dev.zip && rm dev.zip
+ADD https://github.com/AliNZaim/Accelerateworkshop-Computational-ADME.git /
+RUN git checkout dev
 #RUN wget https://github.com/AliNZaim/Accelerateworkshop-Computational-ADME/archive/refs/heads/dev.zip && unzip dev.zip && rm dev.zip
 #RUN bash /Accelerateworkshop-Computational-ADME-dev/prep/install-libgfortran3.sh
 #RUN conda config --add channels conda-forge
