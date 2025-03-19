@@ -1,0 +1,11 @@
+name: adme-dock
+channels:
+  - conda-forge
+  - default
+dependencies:
+  - scikit-learn==1.6.1
+  - rdkit
+  - xgboost
+  - lightgbm
+  - deepchem
+  - chemprop
