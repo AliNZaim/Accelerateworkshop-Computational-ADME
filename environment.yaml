@@ -9,3 +9,8 @@ dependencies:
   - lightgbm
   - deepchem
   - chemprop
+  - boost
+  - boost-cpp
+  - icu
+  - libboost
+  - cuda

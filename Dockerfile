@@ -11,6 +11,6 @@ USER root
 RUN unzip /dev -d / && rm /dev.zip
 
 WORKDIR /Accelerateworkshop-Computational-ADME-dev
-RUN micromamba install -y --update-deps -n base -f environment.yaml && micromamba clean --all --yes
+RUN micromamba install -y -n base -f environment.yaml && micromamba clean --all --yes
 USER mambauser
 CMD ["python", "--version"]
