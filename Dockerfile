@@ -7,8 +7,7 @@ FROM ghcr.io/mamba-org/micromamba:git-9d20aae-amazon2023
 
 ARG CACHEBUST
 RUN echo "$CACHEBUST"
-ADD git@github.com:AliNZaim/Accelerateworkshop-Computational-ADME.git /
-RUN git checkout dev
+ADD https://github.com/AliNZaim/Accelerateworkshop-Computational-ADME/archive/refs/heads/dev.zip /
 #RUN wget https://github.com/AliNZaim/Accelerateworkshop-Computational-ADME/archive/refs/heads/dev.zip && unzip dev.zip && rm dev.zip
 #RUN bash /Accelerateworkshop-Computational-ADME-dev/prep/install-libgfortran3.sh
 #RUN conda config --add channels conda-forge
