@@ -1,6 +1,0 @@
-scikit-learn==1.6.1
-rdkit
-xgboost
-lightgbm
-deepchem
-chemprop
